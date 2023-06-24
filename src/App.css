@@ -1,5 +1,43 @@
+:root {
+  --jon-red: rgb(80, 18, 18);
+  --jon-green: rgb(34, 102, 34);
+  --jon-white: #ffffff;
+}
+
+
+.hide,
+.offscreen {
+  display: none;
+}
+
+.valid {
+  color: var(--jon-green);
+}
+
+.invalid {
+  color: var(--jon-red);
+}
+
+section .logs {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  height: 40vw;
+}
+
+p#uidnote,
+p#pwdnote,
+p#confirmnote {
+  font-size: 12px;
+  color: var(--jon-white);
+  background-color: rgb(80, 18, 18);
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -32,7 +70,22 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  section .logs {
+    height: 100%;
+    margin-top: 20%;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .col {
+    flex: inherit;
+    margin-bottom: 40px;
   }
 }
